@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.lang.Math;
+import java.text.DecimalFormat;
 
 public class main{
     public static void main(String [] args){
@@ -23,6 +24,8 @@ public class main{
         double xCoordinate = (initialSpeed * angleCOS) * flightTime;
         double yCoordinate = (initialSpeed * angleSIN) * flightTime - 0.5 * gravForce * flightTime * flightTime;
 
-        System.out.println("With a flight time of " + flightTime + ", the x coordinate will be " + xCoordinate + " and the y coordinate will be " + yCoordinate);
+        // I stole this https://www.geeksforgeeks.org/java-program-to-round-a-number-to-n-decimal-places/
+        DecimalFormat roundedDecimal = new DecimalFormat("#.###");
+        System.out.println("With a flight time of " + flightTime + ", the x coordinate will be " + roundedDecimal.format(xCoordinate) + " and the y coordinate will be " + roundedDecimal.format(yCoordinate));
     }
 }
