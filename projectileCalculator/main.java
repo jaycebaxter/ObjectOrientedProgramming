@@ -14,8 +14,9 @@ public class main{
         // Initial angle is in degrees
         System.out.print("Please enter the initial angle of the projectile in degrees: ");
         double initialAngle = userInput.nextDouble();
-        double angleCOS = Math.cos(initialAngle);
-        double angleSIN = Math.sin(initialAngle);
+        double angleRadians = Math.toRadians(initialAngle);
+        double angleCOS = Math.cos(angleRadians);
+        double angleSIN = Math.sin(angleRadians);
 
         // Flight time is in seconds
         System.out.print("Please enter the flight time of the projectile in seconds: ");
