@@ -21,7 +21,7 @@ public class main{
         double flightTime = userInput.nextDouble();
 
         double xCoordinate = (initialSpeed * angleCOS) * flightTime;
-        double yCoordinate = (initialSpeed * angleSIN) flightTime - 0.5 * gravForce * flightTime * flightTime;
+        double yCoordinate = (initialSpeed * angleSIN) * flightTime - 0.5 * gravForce * flightTime * flightTime;
 
         System.out.println("With a flight time of " + flightTime + ", the x coordinate will be " + xCoordinate + "and the y coordinate will be " + yCoordinate);
     }
